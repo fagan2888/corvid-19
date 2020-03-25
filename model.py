@@ -18,5 +18,6 @@ def read_data(url):
     data = data.groupby(data.index).sum()
     data = data.T
     data.index = pd.to_datetime(data.index)
-    
+    data.index.name = 'Date'
+
     return data
